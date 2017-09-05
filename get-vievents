@@ -1,0 +1,1 @@
+Get-VIEvent med-ccs-001 -MaxSamples([int]::MaxValue) | Where-Object {$_.FullFormattedMessage -like "*shutdown*"} |Select CreatedTime, UserName, FullFormattedMessage
